@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <style>
+		body{
+			background-color:#FFFFFFFF;
+			}
+table {
+  border-collapse: collapse;
+  overflow-x:auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th{
+	color:red;
+	bgcolor:green;
+	}
+
+tr:nth-child(even) {background-color: }
+tr:nth-child(odd) {background-color: #97BC62FF;}
+</style>
+  </head>
+  <body>
+	  <center>
+		  <h1>Covid-19 India Stats</h1>
+		  <p>Made by Chps</p>
+		  <table>
+			  <tr>
+				  <th>S. No</th>
+				  <th>State</th>
+				  <th>ActiveCases</th>
+				  <th>Cured/Discharged</td>
+				  <th>Deaths</td>
+				  <th>Total</th>
+				</tr>
+				{% for row in data %}
+				<tr>
+					{% for item in row %}
+					<td> {{ item }}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+				</table>
+		</center>
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=7227428&style=0007&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count"   border="0" >
+</body>
+</html>
